@@ -5,7 +5,7 @@ import sys
 import time
 import subprocess
 import tempfile
-from .image_types import ImageInfo, ImageMatch
+from image_types import ImageInfo, ImageMatch
 import abc
 from pathlib import Path
 from typing import List, Tuple, Dict, Optional, Any
@@ -16,9 +16,9 @@ from dataclasses import dataclass
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
 
-import logging as python_logging
-python_logging.basicConfig(level=python_logging.INFO)
-logger = python_logging.getLogger(__name__)
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 @dataclass

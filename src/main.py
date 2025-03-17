@@ -7,11 +7,11 @@ import sys
 from pathlib import Path
 
 # Import modules from the imagefinder package
-from imagefinder.database import init_database as InitDatabase, open_database as OpenDatabase
-from imagefinder.imageprocessor import find_similar_images as FindSimilarImages, SearchOptions
-from imagefinder.logging import setup_logger as SetupLogger
-from imagefinder.scanner import scan_and_store_folder as ScanAndStoreFolder, ScanOptions
-from imagefinder.utils import get_default_database_path as GetDefaultDatabasePath, parse_threshold as ParseThreshold
+from database import init_database as InitDatabase, open_database as OpenDatabase
+from imageprocessor import find_similar_images as FindSimilarImages, SearchOptions
+from mylogging import setup_logger as SetupLogger
+from scanner import scan_and_store_folder as ScanAndStoreFolder, ScanOptions
+from utils import get_default_database_path as GetDefaultDatabasePath, parse_threshold as ParseThreshold
 
 def parse_arguments():
     """Parse command line arguments and return them as a dictionary"""
@@ -186,7 +186,7 @@ def main():
     # Setup debug logging if enabled
     debug_mode = args.get("debug", False)
     if debug_mode:
-        log_path = "imagefinder.log"
+        log_path = ".log"
         if custom_log_path := args.get("logfile"):
             log_path = custom_log_path
         try:
