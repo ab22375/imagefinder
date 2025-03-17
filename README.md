@@ -1,4 +1,3 @@
-
 # ImageFinder
 
 ImageFinder is a python tool for scanning, indexing, and finding similar images in large collections. It features specialized support for RAW image formats from various camera manufacturers, making it ideal for photographers.
@@ -19,6 +18,18 @@ ImageFinder is a python tool for scanning, indexing, and finding similar images 
 - **SQLite database** for fast indexing and retrieval
 
 ## Installation
+
+```bash
+pip uninstall -y imagefinder
+poetry build
+pip install dist/imagefinder-0.1.0-py3-none-any.whl
+```
+
+Then you can run as
+
+imagefinder
+or
+PYTHONPATH=src python -m imagefinder.main
 
 ### From Github
 
