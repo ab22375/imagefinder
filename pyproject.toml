@@ -1,0 +1,22 @@
+[project]
+name = "imagefinder"
+version = "0.1.0"
+description = "Tool for finding similar images and handling RAW formats"
+authors = [
+    {name = "ab22375",email = "ab22375@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.2.4,<3.0.0)",
+    "opencv-contrib-python (>=4.11.0.86,<5.0.0.0)",
+    "pillow (>=11.1.0,<12.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "imagefinder", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
