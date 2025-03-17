@@ -6,7 +6,7 @@ import sqlite3
 from pathlib import Path
 from typing import Tuple, List, Optional, Dict, Any
 import logging
-from image_types import ImageInfo
+from imagefinder.image_types import ImageInfo
 
 def init_database(db_path: str) -> sqlite3.Connection:
     """

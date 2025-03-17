@@ -5,7 +5,7 @@ import sys
 import time
 import subprocess
 import tempfile
-from image_types import ImageInfo, ImageMatch
+from imagefinder.image_types import ImageInfo, ImageMatch
 import abc
 from pathlib import Path
 from typing import List, Tuple, Dict, Optional, Any

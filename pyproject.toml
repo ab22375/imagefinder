@@ -1,22 +1,20 @@
-[project]
+[tool.poetry]
 name = "imagefinder"
 version = "0.1.0"
 description = "Tool for finding similar images and handling RAW formats"
-authors = [
-    {name = "ab22375",email = "ab22375@gmail.com"}
-]
+authors = ["ab22375 <ab22375@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "numpy (>=2.2.4,<3.0.0)",
-    "opencv-contrib-python (>=4.11.0.86,<5.0.0.0)",
-    "pillow (>=11.1.0,<12.0.0)"
-]
+packages = [{include = "imagefinder", from = "src"}]  # 👈 Correct package mapping
 
-[tool.poetry]
-packages = [{include = "imagefinder", from = "src"}]
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.2.4"
+opencv-contrib-python = "^4.11.0"
+pillow = "^11.1.0"
 
+[tool.poetry.scripts]
+imagefinder = "imagefinder.main:main"  # 👈 Adjusted to match new package structure
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

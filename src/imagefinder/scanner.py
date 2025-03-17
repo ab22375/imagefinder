@@ -15,9 +15,9 @@ import cv2
 import numpy as np
 
 # Import local modules with relative imports
-from database import check_image_exists, store_image_info
-from imageprocessor import load_image, find_similar_images, ImageLoaderRegistry
-from image_types import ImageInfo, ImageMatch
+from imagefinder.database import check_image_exists, store_image_info
+from imagefinder.imageprocessor import load_image, find_similar_images, ImageLoaderRegistry
+from imagefinder.image_types import ImageInfo, ImageMatch
 
 @dataclass
 class ScanOptions:
