@@ -32,7 +32,9 @@ pip install git+https://github.com/ab22375/imagefinder.git
 
 Then you can run as
 
+```
 imagefinder
+```
 
 
 **when finished, to deactivate the virtual environment, run**
