@@ -1,0 +1,13 @@
+/Users/z/dev/run/python/imagefinder/rust/target/release/deps/libpyo3_build_config-5475e16be5f9722c.rmeta: /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/lib.rs /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/errors.rs /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/impl_.rs /Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config-file.txt /Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config.txt
+
+/Users/z/dev/run/python/imagefinder/rust/target/release/deps/libpyo3_build_config-5475e16be5f9722c.rlib: /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/lib.rs /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/errors.rs /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/impl_.rs /Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config-file.txt /Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config.txt
+
+/Users/z/dev/run/python/imagefinder/rust/target/release/deps/pyo3_build_config-5475e16be5f9722c.d: /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/lib.rs /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/errors.rs /Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/impl_.rs /Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config-file.txt /Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config.txt
+
+/Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/lib.rs:
+/Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/errors.rs:
+/Users/z/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pyo3-build-config-0.19.2/src/impl_.rs:
+/Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config-file.txt:
+/Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out/pyo3-build-config.txt:
+
+# env-dep:OUT_DIR=/Users/z/dev/run/python/imagefinder/rust/target/release/build/pyo3-build-config-5e8792e7fe7d1f46/out

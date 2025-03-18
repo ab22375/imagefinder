@@ -100,8 +100,8 @@ class RawImageLoader(ImageLoader):
             if success:
                 return img
             
-            # If dcraw fails, try libraw fallback
-            success, img = self.try_libraw(path, temp_filename)
+            # If dcraw fails, try rawpy fallback
+            success, img = self.try_rawpy(path, temp_filename)
             if success:
                 return img
             
@@ -150,27 +150,28 @@ class RawImageLoader(ImageLoader):
             logger.warning(f"Error during dcraw conversion: {e}")
             return False, None
     
-    def try_libraw(self, path: str, temp_filename: str) -> Tuple[bool, np.ndarray]:
-        # Try with rawtherapee-cli as an alternative for RAW conversion
+    def try_rawpy(self, path: str, temp_filename: str) -> Tuple[bool, np.ndarray]:
+        # Try with rawpy as an alternative for RAW conversion
         try:
-            process = subprocess.Popen(
-                ['rawtherapee-cli', '-o', temp_filename, '-c', path],
-                stderr=subprocess.PIPE
-            )
-            _, stderr = process.communicate()
+            import rawpy
+            import imageio
             
-            if process.returncode != 0:
-                logger.warning(f"rawtherapee conversion failed: {stderr.decode()}")
-                return False, None
-            
-            img = cv2.imread(temp_filename, cv2.IMREAD_GRAYSCALE)
-            if img is None or img.size == 0:
-                return False, None
-            
-            return True, img
-        
+            with rawpy.imread(path) as raw:
+                # Process with camera white balance and default settings
+                rgb = raw.postprocess(use_camera_wb=True, no_auto_bright=False, output_bps=8)
+                
+                # Save to temporary file
+                imageio.imsave(temp_filename, rgb)
+                
+                # Convert to grayscale and return
+                img = cv2.imread(temp_filename, cv2.IMREAD_GRAYSCALE)
+                if img is None or img.size == 0:
+                    return False, None
+                
+                return True, img
+                
         except Exception as e:
-            logger.warning(f"Error during rawtherapee conversion: {e}")
+            logger.warning(f"Error during rawpy conversion: {e}")
             return False, None
     
     def try_cr3(self, path: str, temp_filename: str) -> Tuple[bool, np.ndarray]:
@@ -207,7 +208,6 @@ class RawImageLoader(ImageLoader):
         except Exception as e:
             logger.warning(f"Error during CR3 conversion: {e}")
             return False, None
-
 
 class HeicImageLoader(ImageLoader):
     """Handles HEIC/HEIF formats"""

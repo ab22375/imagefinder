@@ -52,7 +52,7 @@ deactivate
 - External tools for RAW processing (optional but recommended):
   - exiftool
   - dcraw
-  - rawtherapee-cli
+  - rawpy
 
 ## Usage
 

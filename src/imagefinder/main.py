@@ -186,7 +186,7 @@ def main():
     # Setup debug logging if enabled
     debug_mode = args.get("debug", False)
     if debug_mode:
-        log_path = ".log"
+        log_path = "imagefinder.log"
         if custom_log_path := args.get("logfile"):
             log_path = custom_log_path
         try:
