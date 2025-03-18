@@ -20,43 +20,6 @@ ImageFinder is a python tool for scanning, indexing, and finding similar images 
 ## Installation
 
 ```bash
-<<<<<<< HEAD
-pip uninstall -y imagefinder
-poetry build
-pip install dist/imagefinder-0.1.0-py3-none-any.whl
-```
-
-Then you can run as
-
-imagefinder
-or
-PYTHONPATH=src python -m imagefinder.main
-
-### From Github
-
-```bash
-# with poetry 
-
-poetry install git@github.com:ab22375/py_search_image.git
-
-# or with pip
-
-pip install git@github.com:ab22375/py_search_image.git
-```
-
-### From Source
-
-```bash
-# Clone the repository
-git clone git@github.com:ab22375/py_search_image.git
-cd py_search_image
-
-# Install with Poetry
-poetry install
-
-# Or with pip
-pip install .
-=======
 mkdir imagefinder
 cd imagefinder
 which python3
@@ -64,19 +27,18 @@ python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip setuptools
 pip install git+https://github.com/ab22375/imagefinder.git
-```
-
-Then you can run the program
 
 ```
+
+Then you can run as
+
 imagefinder
-```
+
 
 **when finished, to deactivate the virtual environment, run**
 
 ```
 deactivate
->>>>>>> 2825276 (upd)
 ```
 
 ## Dependencies
