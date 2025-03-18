@@ -1,57 +1,56 @@
-# Python
+# Ignore Python compiled files
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+
+# Ignore Python package artifacts
+*.whl
+*.tar.gz
 *.egg-info/
-.installed.cfg
-*.egg
+dist/
+build/
+pip-wheel-metadata/
 
-_private/
+# Ignore Poetry lock file (optional, include if you prefer locking dependencies)
+poetry.lock
 
-# Virtual Environments
-venv/
-ENV/
-env/
-.venv/
-.env/
+# Ignore specific temporary Python files (like scanner_250318_2144.py)
+*_250318_*.py
 
-# IDE files
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-
-# Log files
+# Ignore logs and debug files
 *.log
+*.out
+*.err
+logs/
 
-# OS generated files
+# Ignore Rust build files
+/target/
+Cargo.lock
+
+# Ignore OS-specific files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Distribution / packaging
-dist/
-build/
+# Ignore editor and IDE config files
+.vscode/
+.idea/
+*.iml
+
+# Ignore private files
+_private/
+
+# Ignore temporary backup files
+*.bak
+*.tmp
+*~
+
+# Ignore generated binary files
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.a
