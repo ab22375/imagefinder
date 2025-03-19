@@ -175,7 +175,7 @@ def benchmark_files(file_paths, output_dir=None, runs=3, timeout_seconds=60):
                             output_path = os.path.join(output_dir, f"python_{file_name}.jpg")
                             cv2.imwrite(output_path, python_img)
                 except TimeoutError:
-                    python_error = "Timed out after {TIMEOUTSEC} seconds"
+                    python_error = f"Timed out after {TIMEOUTSEC} seconds"
                     logging.error(f"Python processing timed out on {file_name}")
                     break  # Don't try additional runs if it times out
                 except Exception as e:
@@ -203,7 +203,7 @@ def benchmark_files(file_paths, output_dir=None, runs=3, timeout_seconds=60):
                                 output_path = os.path.join(output_dir, f"rust_{file_name}.jpg")
                                 cv2.imwrite(output_path, rust_img)
                     except TimeoutError:
-                        rust_error = "Timed out after {TIMEOUTSEC} seconds"
+                        rust_error = f"Timed out after {TIMEOUTSEC} seconds"
                         logging.error(f"Rust processing timed out on {file_name}")
                         break  # Don't try additional runs if it times out
                     except Exception as e:
